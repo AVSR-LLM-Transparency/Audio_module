@@ -1,0 +1,3 @@
+# Audio Module
+
+At the start of the Recording state, it starts sending chunks of audio data and counting how much chunks were sent. When switching to Transferring, it verifies that the number of chunk received by the Video Module is the same as the number of chunk sent to transmit to the state manager when the transfer is complete. The Audio can only make a recording request, when it is in evaluation mode. This means that it correctly received which video it has to play the sounds from and that it is ready to play it, while in normal mode, it is just waiting that the state change to start the recording.
